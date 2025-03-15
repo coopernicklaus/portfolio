@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cooper's Art Courses</title>
+<link rel="stylesheet" href="styles/p3_styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Art</a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about_me.html">About Me</a>
+            <a href="resume_updated.html">Resume</a>
+
+        </div>
+        
+    </nav>
+    <!--Banner and Logo introduction-->
+    <header class="banner">
+        <h1>Cooper's Art Course</h1>
+        <img src="images/Avatar.png" alt="Sprite">
+    </header>
+
+    <!--Button to signup-->
+    <section class="static-content">
+        <h2>Sign up for art lessons today!</h2>
+        <button onclick="document.getElementById('signup-form').style.display='block'">Sign Up Now</button>
+        <div id="signup-form" class="form-popup">
+            <form class="form-container">
+                <h2>Fill out information</h2>
+                <label for="name">First and Last Name:</label>
+                <input type="text" id="name" name="fullname" placeholder="Enter Name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+                <button type="submit" class="btn">Submit!</button>
+                <button type="button" class="btn cancel" onclick="document.getElementById('signup-form').style.display='none'">Exit</button>
+            </form>
+        </div>
+    </section>
+
+    <!--Personal artwork showcase-->
+    <section class="recent-artwork">
+        <h2>Previous Artwork from Students</h2>
+        <div class="art-gallery">
+            <img src="images/Beach1.png" alt="Beach">
+            <img src="images/Snowman.jpg" alt="Snowman">
+            <img src="images/Space1.png" alt="Space">
+        </div>
+    </section>
+    <!--Video-->
+    <section class="video">
+        <h2>Animation done by student</h2>
+        <video controls>
+            <source src="media/Ocean.mov" type="video/quicktime">
+        </video>
+    </section>
+
+    <section class="reviews">
+        <h2>Reviews from Previous Students</h2>
+        <div class="review-grid">
+            <div class="review black horizontal">
+
+                <h3>Jackie Black</h3>
+                <p class="texts">Artist</p>
+                <p>"Amazing class and amazing people. 10/11 would recommend!"</p>
+            </div>
+
+            <div class="review red vertical">
+
+                <h3>Adrian Sandler</h3>
+                <p class="texts">Graphic Designer</p>
+                <p>"the course was great! So was the free food! 13/11"</p>
+            </div>
+
+            <div class="review green horizontal">
+                <h3>Joanne Hutcherson</h3>
+                <p class="texts">3D Modeler</p>
+                <p>"I took this class for 5 minutes and mastered the art of Blender! 18/11"</p>
+            </div>
+
+            <div class="review blue horizontal">
+                <h3>Matthias Lillard</h3>
+                <p class="texts">Arby's Worker</p>
+                <p>"I don't even like art. But man this class was a delight! 8/11"</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cooper's Art Gallery | All Rights Reserved</p>
+    </footer>
+
+
+
+
+
+
+</body>
+</html>
