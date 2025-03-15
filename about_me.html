@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Cooper</title>
+    <link rel="stylesheet" href="styles/about_styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation Menu -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Art</a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about_me.html">About Me</a>
+            <a href="resume_updated.html">Resume</a>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <!-- About Me Content -->
+    <div class="about-container">
+        <div class="about-header">
+            <h1>About Me</h1>
+        </div>
+        
+        <div class="about-content">
+            <div class="profile-image">
+                <img src="Images/Fix-It Felix.jpg"Cooper Christensen class="profile-img">
+            </div>
+            
+            <div class="bio">
+                <h2>Cooper Christensen</h2>
+                <p>
+                    Hello. My name is Cooper Christensen. I am a junior studying at the University of Oregon and I am studying Computer and Data Sciences.
+                </p>
+                
+                <p>
+                    In Computers, I have developed awesome problem solving skills working with HTML, CSS, and JavaScript. I have learned to develop websites and I have made my own as you can see here. I hope to achive more on my coding journey.
+                </p>
+                
+                <p>
+                    When I'm not working on my computer, I love to hangout with my friends mot of the time. We play video games together, we like to bowl and visit the arcade, and we like to go to restaurants.
+                </p>
+                
+                <p>
+                    Let's Code Baby!
+                </p>
+                
+                <a href="resume_updated.html" class="resume-btn">My Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cooper's Art Gallery | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Mobile settings
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
