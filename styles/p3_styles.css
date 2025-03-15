@@ -1,0 +1,310 @@
+/* Styles */
+
+/* whole site setup*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/* banner style */
+.banner {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 0, 255);
+}
+
+/* Section 2 color/allignment */
+.static-content {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+}
+
+/* Header 2 */
+.static-content h2 {
+    color: black;
+    font-weight: 800;
+}
+
+/* Button setup */
+.static-content button {
+    background: Green;
+    color: gainsboro;
+    padding: 15px 30px;
+    border: solid;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+/* Hover effect */
+.static-content button:hover {
+    background: darkgreen;
+}
+
+/* 3rd section color/allignment */
+.recent-artwork {
+    text-align: center;
+    padding: 10px 20px;
+    background: lightgrey;
+}
+
+/* Header */
+.recent-artwork h2 {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+/* Image flex layout */
+.art-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+/* Image sizea and borders */
+.art-gallery img {
+    width: 600px;
+    height: 350px;
+    border: solid rgb(0, 0, 0);
+    border-radius: 10px;
+
+}
+
+/* Video section */
+.video {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgb(129, 129, 129);
+}
+
+/* Video border and size */
+.video video {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+/* Review Section */
+.reviews {
+    padding: 4rem 2rem;
+    background: rgb(115, 0, 182);
+}
+
+.reviews h2 {
+    text-align: center;
+    font-weight: 800;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+.review {
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.review .texts {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0 0 2rem 0;
+
+}
+
+.review p:last-child {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.review.black {
+    background: black;
+    color: white;
+    grid-column: span 2;
+}
+
+.review.red {
+    background: rgb(148, 8, 8);
+    color: white;
+    grid-row: span 2;
+}
+
+.review.green {
+    background: green;
+    color: white;
+    grid-column: span 4;
+
+}
+
+.review.blue {
+    background: blue;
+    color: white;
+    grid-column: span 4;
+}
+
+footer {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+/* Custom Styling */
+@media (max-width: 576px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review {
+        grid-column: span 1 !important;
+    }
+
+    .art-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .art-gallery img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .art-gallery {
+        flex-wrap: wrap;
+    }
+
+    .review {
+        grid-column: span 1;
+    }
+}
+
+
+@media (min-width: 1201px) {
+    .review-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .art-gallery {
+        flex-wrap: nowrap;
+    }
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form-container input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .art-gallery {
+        flex-wrap: wrap;
+    }
+
+    .review {
+        grid-column: span 1;
+    }
+}
+
+
+@media (min-width: 1201px) {
+    .review-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .art-gallery {
+        flex-wrap: nowrap;
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Logo style */
+.logo {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Nav links styling */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7c009b;
+}
